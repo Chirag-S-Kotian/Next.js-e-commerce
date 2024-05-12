@@ -59,7 +59,7 @@ model configuration {
 
 model User {
   id    String  @id @default(cuid()) @map("_id") @db.ObjectId
-  email String
+  email String @unique
   Order Order[]
 
   createdAt DateTime @default(now())
