@@ -17,5 +17,6 @@ model configuration {
   id              String  @id @default(auto()) @map("_id") @db.ObjectId
   width           Int
   height          Int
+  imageUrl        Int
   croppedImageUrl String?
 }
