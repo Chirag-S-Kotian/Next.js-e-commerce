@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Recursive } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/componentS/";
+import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
