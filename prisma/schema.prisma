@@ -12,34 +12,34 @@ datasource db {
 
 // Define enums for specific field constraints
 enum OrderStatus {
-  FULFILLED
-  SHIPPED
-  AWAITING_SHIPMENT
+  fulfilled
+  shipped
+  awaiting_shipment
 }
 
 enum PhoneModel {
-  IPHONE_X
-  IPHONE_11
-  IPHONE_12
-  IPHONE_13
-  IPHONE_14
-  IPHONE_15
+  iphonex
+  iphone11
+  iphone12
+  iphone13
+  iphone14
+  iphone15
 }
 
 enum CaseMaterial {
-  SILICONE
-  POLYCARBONATE
+  silicone
+  polycarbonate
 }
 
 enum CaseFinish {
-  SMOOTH
-  TEXTURED
+  smooth
+  textured
 }
 
 enum CaseColor {
-  BLACK
-  BLUE
-  ROSE
+  black
+  blue
+  rose
 }
 
 // Define the main models
@@ -72,7 +72,7 @@ model Order {
   userId          String        @db.ObjectId
   amount          Float
   isPaid          Boolean       @default(false)
-  status          OrderStatus   @default(AWAITING_SHIPMENT)
+  status          OrderStatus   @default(awaiting_shipment)
 
   shippingAddress   ShippingAddress? @relation(fields: [shippingAddressId], references: [id])
   shippingAddressId String?          @db.ObjectId
